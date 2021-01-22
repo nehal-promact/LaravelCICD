@@ -35,4 +35,4 @@ jobs:
       run: vendor/bin/phpunit
     - name: Deploy Application
       shell: cmd
-      run: '"C:/Program Files (x86)/IIS/Microsoft Web Deploy V3/msdeploy.exe" -verb:sync -allowUntrusted -source:contentPath="LaravelCICD" -dest:contentPath="${{ LaravelCICD }}",computerName="${{ ec2-3-17-151-165.us-east-2.compute.amazonaws.com }}/msdeploy.axd?site=${{ LaravelCICD }}",username="${{ Administrator }}",password="${{ TWvu*CEo;FGCnY9T?9H=Ydx7z-8$q48w }}",authtype="Basic"'
+      run: '"C:/Program Files (x86)/IIS/Microsoft Web Deploy V3/msdeploy.exe" -verb:sync -allowUntrusted -source:contentPath="LaravelCICD" -dest:contentPath="LaravelCICD",computerName="ec2-3-17-151-165.us-east-2.compute.amazonaws.com/msdeploy.axd?site=LaravelCICD",username="Administrator",password="TWvu*CEo;FGCnY9T?9H=Ydx7z-8$q48w",authtype="Basic"'
